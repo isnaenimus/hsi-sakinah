@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,7 +33,7 @@ fun AppNavigation() {
         containerColor = Color.White,
         bottomBar = {
             NavigationBar(containerColor = Color.White) {
-                val selectedItemIndex by rememberSaveable {
+                var selectedItemIndex by rememberSaveable {
                     mutableStateOf(0)
                 }
 
@@ -40,13 +41,7 @@ fun AppNavigation() {
                     NavigationBarItem(
                         selected = selectedItemIndex == index,
                         onClick = {
-                            navController.navigate(navItem.route) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
+                            selectedItemIndex = index
                         },
                         icon = {
                             Icon(
