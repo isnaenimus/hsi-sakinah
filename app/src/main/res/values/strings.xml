@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Hsi Sakinah</string>
+
+<!--    General String-->
+    <string name="password">Password</string>
+    <string name="nip">NIP</string>
+    <string name="look_faq">Lihat FAQ</string>
+    <string name="looked_faq">Menuju Halaman FAQ...</string>
+<!--    Login Screen-->
+    <string name="login">Login</string>
+    <string name="ask_access">Belum bisa akses?</string>
+    <string name="call_ikhwan">Hubungi CS Ikhwan</string>
+    <string name="call_akhwat">Hubungi CS Akhwat</string>
+    <string name="called_ikhwan">Mengubungi CS Ikhwan...</string>
+    <string name="called_akhwat">Mengubungi CS Akhwat...</string>
+<!--    Home Screen-->
 </resources>

@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dicoding.hsisakinah.navigation.AppNavigation
+import com.dicoding.hsisakinah.screens.LoginScreen
 import com.dicoding.hsisakinah.ui.theme.HsiSakinahTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,7 +16,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             HsiSakinahTheme {
-                AppNavigation()
+//                AppNavigation()
+                LoginScreen()
             }
         }
     }
