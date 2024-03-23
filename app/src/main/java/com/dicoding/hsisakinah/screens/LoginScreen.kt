@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.materialIcon
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
@@ -41,10 +40,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dicoding.hsisakinah.R
 import com.dicoding.hsisakinah.components.ClickableTextComponent
-import com.dicoding.hsisakinah.components.NormalTextComponent
+import com.dicoding.hsisakinah.components.TextNormalComponent
 import com.dicoding.hsisakinah.components.TextFieldComponent
-import com.dicoding.hsisakinah.data.Credentials
-import com.dicoding.hsisakinah.ui.theme.BlueButton
+import com.dicoding.hsisakinah.model.Credentials
 import com.dicoding.hsisakinah.ui.theme.BlueLoginColor
 
 @Composable
@@ -75,7 +73,7 @@ fun LoginScreen() {
                     modifier = Modifier
                         .align(alignment = Alignment.CenterHorizontally)
                 )
-                NormalTextComponent(
+                TextNormalComponent(
                     value = stringResource(R.string.nip),
                     color = Color.Black,
                     align = TextAlign.Start,
@@ -87,7 +85,7 @@ fun LoginScreen() {
                     onChange = { data -> credentials = credentials.copy(nip = data)}
                 )
                 Spacer(modifier = Modifier.height(20.dp))
-                NormalTextComponent(
+                TextNormalComponent(
                     stringResource(R.string.password),
                     Color.Black,
                     TextAlign.Start,
@@ -115,7 +113,7 @@ fun LoginScreen() {
                     )
                 }
                 Spacer(modifier = Modifier.height(20.dp))
-                NormalTextComponent(
+                TextNormalComponent(
                     stringResource(R.string.ask_access),
                     Color.Black,
                     TextAlign.Center,
