@@ -1,4 +1,4 @@
-package com.dicoding.hsisakinah.data
+package com.dicoding.hsisakinah.model
 
 data class Credentials(
     var nip: String = "",

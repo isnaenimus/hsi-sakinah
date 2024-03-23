@@ -1,6 +1,6 @@
 package com.dicoding.hsisakinah.components
 
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardOptions
@@ -11,11 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -28,11 +23,21 @@ import androidx.compose.ui.unit.sp
 import com.dicoding.hsisakinah.ui.theme.GrayCard
 
 @Composable
-fun NormalTextComponent(value: String, color: Color, align: TextAlign, fontWeight: FontWeight) {
+fun TextTitleComponent(value: String, color: Color) {
     Text(
         text = value,
         modifier = Modifier
             .fillMaxWidth(),
+        style = MaterialTheme.typography.titleLarge,
+        color = color,
+        fontWeight = FontWeight.Bold,
+    )
+}
+@Composable
+fun TextNormalComponent(value: String, color: Color, align: TextAlign, fontWeight: FontWeight) {
+    Text(
+        text = value,
+//        modifier = modifier,
         style = MaterialTheme.typography.titleMedium,
         color = color,
         textAlign = align,

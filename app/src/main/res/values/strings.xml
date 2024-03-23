@@ -14,4 +14,7 @@
     <string name="called_ikhwan">Mengubungi CS Ikhwan...</string>
     <string name="called_akhwat">Mengubungi CS Akhwat...</string>
 <!--    Home Screen-->
+<!--Search Screen-->
+    <string name="search_partner">Pencarian Calon Pasangan</string>
+    <string name="search_desc">Profil-profil berikut adalah para peserta yang telah  disesuaikan dengan preferensimu</string>
 </resources>
